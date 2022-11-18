@@ -1,0 +1,282 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f8f9f8;
+}
+
+.signup-main {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  overflow-x: hidden;
+}
+
+.signup-main header {
+  background-color: white;
+  min-height: 900px;
+}
+
+.signup-head {
+  padding-top: 32px;
+  text-align: center;
+}
+
+.signup-head img {
+  width: 34px;
+  height: 32px;
+}
+
+.signup-head-title {
+  position: relative;
+  top: -10px;
+  display: inline-block;
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 23px;
+  color: #3e4b4b;
+}
+
+.signup-title {
+  padding-top: 100.5px;
+  margin-left: 50px;
+  font-family: "M PLUS 1";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 40px;
+  color: #011312;
+}
+
+.h-100 {
+  height: 100%;
+}
+.signup-form {
+  margin-top: 53px;
+  margin-left: 60px;
+  margin-right: 61px;
+}
+.input-group {
+  margin-bottom: 16px;
+}
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+  margin-top: 8px;
+  border: 1px solid #e7e7e7;
+  border-radius: 1px;
+  box-sizing: border-box;
+  height: 52px;
+  padding: 0.5em;
+  width: 100%;
+}
+input[type="password"] {
+  border-radius: 4px;
+}
+
+input[type="email"]::placeholder,
+input[type="password"] ::placeholder,
+input[type="text"]::placeholder {
+  font-family: "M PLUS 1";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+
+  font-feature-settings: "rclt" off;
+
+  /* Default elements */
+
+  color: #a0a7a7;
+}
+
+/* suppress IE >= 10 native functionality that can show password */
+input[type="password"]::-ms-reveal {
+  display: none;
+}
+
+.input-group {
+  position: relative;
+  width: 100%;
+}
+.toggle {
+  background: none;
+  border: none;
+  color: #a0a7a7;
+  /*display: none;*/
+  /*font-size: .9em;*/
+  font-weight: 600;
+  /*padding: .5em;*/
+  position: absolute;
+
+  right: 0.75em;
+  top: 45px;
+  z-index: 9;
+}
+
+.fa {
+  font-size: 13px;
+}
+
+.create-account-btn {
+  height: 53px;
+  width: 100%;
+  background: #008f7d;
+  border: transparent;
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+  /* identical to box height */
+
+  text-align: center;
+
+  color: #ffffff;
+}
+
+.already-have-account {
+  margin: 32px 0;
+  font-family: "M PLUS 1";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color: #3e4b4b;
+}
+
+.go-to-signin {
+  color: #008f7d;
+  text-decoration: none;
+}
+
+.or {
+  font-family: "M PLUS 1";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #e6e5e5;
+  line-height: 0.1em;
+  margin: 10px 0 20px;
+}
+
+.or span {
+  background: #fff;
+  padding: 0 10px;
+}
+
+.facebook-google-login {
+  margin-top: 37px;
+  text-align: center;
+}
+
+.facebook-google-login i {
+  font-size: 20px;
+}
+
+.primary {
+  color: #1877f2;
+  margin-right: 10px;
+}
+.red {
+  color: #ff0000;
+  margin-left: 10px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .signup-main {
+    display: grid;
+    grid-template-columns: 80% 20%;
+  }
+  .register-banner {
+    position: absolute;
+    z-index: -1;
+    min-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .signup-main {
+    display: grid;
+    grid-template-columns: 100%;
+    overflow-x: hidden;
+  }
+  .register-banner {
+    display: none;
+  }
+  .signup-head {
+    padding-top: 24px;
+  }
+
+  .signup-title {
+    padding-top: 24px;
+    margin-left: 15px;
+  }
+  .signup-main header {
+    min-height: 650px;
+  }
+  .signup-form {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
+.signup-form label {
+  /* H7 | Body 2 */
+
+  font-family: "M PLUS 1";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+
+  font-feature-settings: "rclt" off;
+
+  /* Text 1 */
+
+  color: #011312;
+}
+
+.remember-forgot {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.footer-menu-list a {
+  text-decoration: none;
+}
+
+.remember-forgot label {
+  font-family: "M PLUS 1";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  /* identical to box height, or 143% */
+
+  font-feature-settings: "rclt" off;
+
+  /* Text 1 */
+
+  color: #011312;
+}
+
+.forgot-password {
+  text-decoration: none;
+  font-family: "M PLUS 1";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #008f7d;
+}

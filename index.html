@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medical Form</title>
+    <link rel="stylesheet" href="css/homework1.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/0a0bfae45f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="nav-brand">
+        <h2 class="nav-title">HoangK's Medical</h2>
+      </div>
+      <div class="float-right">
+        <div class="container">
+          <div class="display-date">
+            <span id="day">day</span>,
+            <span id="daynum">00</span>
+            <span id="month">month</span>
+            <span id="year">0000</span>
+          </div>
+          <div class="display-time"></div>
+        </div>
+      </div>
+    </header>
+    <section class="form-Container">
+      <div class="enter-details">
+        <div class="additional-details">
+          <h2 class="h2-bold">Enter Details</h2>
+
+          <form class="detail-form" action="">
+            <div class="name-container">
+              <div>
+                <label for="first-name">First Name</label>
+                <input
+                  type="text"
+                  id="fname"
+                  name="name"
+                  placeholder="First Name"
+                  maxlength="30"
+                  required
+                />
+              </div>
+              <div>
+                <label for="middle-name">Middle Initial</label>
+                <input
+                  type="text"
+                  id="mname"
+                  name="middle-name"
+                  placeholder="Middle Name"
+                  maxlength="1"
+                  onkeypress="return isNotNumber(event)"
+                  autocomplete="off"
+                  required
+                />
+              </div>
+              <div>
+                <label for="last-name">Last Name</label>
+                <input
+                  type="text"
+                  id="lname"
+                  name="last-name"
+                  placeholder="Last Name"
+                  maxlength="30"
+                  required
+                />
+              </div>
+              <div>
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="input-email"
+                  name="email"
+                  placeholder="Email"
+                  required
+                />
+              </div>
+              <div>
+                <label for="Date">Date</label>
+                <input
+                  type="date"
+                  id="input-date"
+                  name="name"
+                  placeholder="Date"
+                  min="1902-11-18"
+                  max="2022-12-12"
+                  required
+                />
+              </div>
+              <div>
+                <label for="social-security">Social Security</label>
+                <input
+                  type="text"
+                  id="social-security"
+                  name="social-security"
+                  placeholder="xxx-xx-xxxx"
+                  onkeypress="return isNumber(event)"
+                  onkeyup="handleChange(event)"
+                  autocomplete="off"
+                  value=""
+                  required
+                />
+              </div>
+            </div>
+            <div class="enter-address">
+              <div>
+                <label for="address-line-1">Address Line 1</label>
+                <input
+                  type="text"
+                  id="address-line-1"
+                  name="address-line-1"
+                  placeholder="Address"
+                  minlength="2"
+                  maxlength="30"
+                  required
+                />
+              </div>
+              <div>
+                <label for="address-line-2">Address Line 2</label>
+                <input
+                  type="text"
+                  id="address-line-2"
+                  name="address-line-2"
+                  placeholder="Address"
+                  minlength="2"
+                  maxlength="30"
+                />
+              </div>
+            </div>
+            <div class="enter-place">
+              <div>
+                <label for="city">City</label>
+                <input
+                  type="text"
+                  id="city"
+                  name="city"
+                  placeholder="City"
+                  minlength="2"
+                  maxlength="30"
+                  required
+                />
+              </div>
+              <div>
+                <label for="state">State</label>
+                <select class="Select-State" required>
+                  <option value="AL">Alabama</option>
+                  <option value="AK">Alaska</option>
+                  <option value="AZ">Arizona</option>
+                  <option value="AR">Arkansas</option>
+                  <option value="CA">California</option>
+                  <option value="CO">Colorado</option>
+                  <option value="CT">Connecticut</option>
+                  <option value="DE">Delaware</option>
+                  <option value="DC">District Of Columbia</option>
+                  <option value="FL">Florida</option>
+                  <option value="GA">Georgia</option>
+                  <option value="HI">Hawaii</option>
+                  <option value="ID">Idaho</option>
+                  <option value="IL">Illinois</option>
+                  <option value="IN">Indiana</option>
+                  <option value="IA">Iowa</option>
+                  <option value="KS">Kansas</option>
+                  <option value="KY">Kentucky</option>
+                  <option value="LA">Louisiana</option>
+                  <option value="ME">Maine</option>
+                  <option value="MD">Maryland</option>
+                  <option value="MA">Massachusetts</option>
+                  <option value="MI">Michigan</option>
+                  <option value="MN">Minnesota</option>
+                  <option value="MS">Mississippi</option>
+                  <option value="MO">Missouri</option>
+                  <option value="MT">Montana</option>
+                  <option value="NE">Nebraska</option>
+                  <option value="NV">Nevada</option>
+                  <option value="NH">New Hampshire</option>
+                  <option value="NJ">New Jersey</option>
+                  <option value="NM">New Mexico</option>
+                  <option value="NY">New York</option>
+                  <option value="NC">North Carolina</option>
+                  <option value="ND">North Dakota</option>
+                  <option value="OH">Ohio</option>
+                  <option value="OK">Oklahoma</option>
+                  <option value="OR">Oregon</option>
+                  <option value="PA">Pennsylvania</option>
+                  <option value="RI">Rhode Island</option>
+                  <option value="SC">South Carolina</option>
+                  <option value="SD">South Dakota</option>
+                  <option value="TN">Tennessee</option>
+                  <option value="TX">Texas</option>
+                  <option value="UT">Utah</option>
+                  <option value="VT">Vermont</option>
+                  <option value="VA">Virginia</option>
+                  <option value="WA">Washington</option>
+                  <option value="WV">West Virginia</option>
+                  <option value="WI">Wisconsin</option>
+                  <option value="WY">Wyoming</option>
+                </select>
+              </div>
+              <div>
+                <label for="zip-code">Zip Code</label>
+                <input
+                  type="text"
+                  id="zip-code"
+                  name="zip-code"
+                  placeholder="Zip Code"
+                  onkeypress="return isNumber(event)"
+                  maxlength="5"
+                  required
+                />
+              </div>
+            </div>
+
+            <label for="consultation"
+              >Please share any details (medical or otherwise) that will help us
+              better prepare for our consultation.*</label
+            >
+            <input
+              type="text"
+              id="consultation"
+              name="consultation"
+              placeholder=""
+            />
+            <div class="check-boxes-container">
+              <h3 class="display-block">Have You Had:</h3>
+              <div class="check-boxes">
+                <div>
+                  <label for="checkbox-1">Chicken Pox</label>
+                  <input type="checkbox" id="checkbox-1" name="checkbox-1" />
+                </div>
+                <div>
+                  <label for="checkbox-2">Measles</label>
+                  <input type="checkbox" id="checkbox-2" name="checkbox-2" />
+                </div>
+                <div>
+                  <label for="checkbox-3">Covid-19</label>
+                  <input type="checkbox" id="checkbox-3" name="checkbox-3" />
+                </div>
+                <div>
+                  <label for="checkbox-4">Polio</label>
+                  <input type="checkbox" id="checkbox-4" name="checkbox-4" />
+                </div>
+                <div>
+                  <label for="checkbox-5">Dengue</label>
+                  <input type="checkbox" id="checkbox-5" name="checkbox-5" />
+                </div>
+              </div>
+            </div>
+            <div class="radio-btn">
+              <h3 class="display-block pt-10">House Type:</h3>
+              <div>
+                <label for="checkbox-5">Own</label>
+                <input type="radio" name="house" required/>
+                <label for="checkbox-5">Rent</label>
+                <input type="radio" name="house" required/>
+                <label for="checkbox-5">Unsure</label>
+                <input type="radio" name="house" required/>
+              </div>
+              <h3 class="display-block pt-10">Have You Been Vaccinated:</h3>
+
+              <div>
+                <label for="checkbox-5">Yes</label>
+                <input type="radio" name="vaccinated" required/>
+                <label for="checkbox-5">No</label>
+                <input type="radio" name="vaccinated" required/>
+              </div>
+            </div>
+
+            <!-- price slider -->
+
+            <div class="d-flex">
+              <div class="wrapper">
+                <header>
+                  <h3>Salary Slider:</h3>
+                </header>
+                <div class="price-input">
+                  <div class="field">
+                    <span>Min</span>
+                    <input type="number" class="input-min" value="50000" />
+                  </div>
+                  <div class="separator">-</div>
+                  <div class="field">
+                    <span>Max</span>
+                    <input type="number" class="input-max" value="150000" />
+                  </div>
+                </div>
+                <div class="slider">
+                  <div class="progress"></div>
+                </div>
+                <div class="range-input">
+                  <input
+                    type="range"
+                    class="range-min"
+                    min="0"
+                    max="200000"
+                    value="50000"
+                    step="100"
+                  />
+                  <input
+                    type="range"
+                    class="range-max"
+                    min="0"
+                    max="200000"
+                    value="150000"
+                    step="100"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="btn-container">
+              <button class="apply-btn">Submit Button</button>
+              <button class="clear-btn">Clear Button</button>
+            </div>
+            <!-- end of price slider -->
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-menu-start">
+        <div class="nav-brand">
+          <h2 class="nav-title text-white">HoangK's Medical</h2>
+        </div>
+        <div class="social-link-container">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+        <p class="footer-para">
+          Copyright © 2022 HoangK's Medical. <br />
+          All rights reserved. Terms of service
+        </p>
+      </div>
+      <div class="footer-menu-mid">
+        <div class="footer-sub-menu">
+          <h3 class="footer-menu-head">Services</h3>
+          <ul class="footer-menu-list">
+            <li>
+              <a style="color: #fff" href="#">Service 1</a>
+            </li>
+            <li>
+              <a style="color: #fff" href="#">Service 2</a>
+            </li>
+            <li>Service 3</li>
+            <li>
+              <a style="color: #fff" href="#">Service 4</a>
+            </li>
+            <li>Service 5</li>
+          </ul>
+        </div>
+        <div class="footer-sub-menu">
+          <h3 class="footer-menu-head">Menu</h3>
+          <ul class="footer-menu-list">
+            <li>
+              <a style="color: #fff" href="#">Pricing</a>
+            </li>
+            <li>
+              <a style="color: #fff" href="#">About Us</a>
+            </li>
+            <li>
+              <a style="color: #fff" href="contact-us.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-menu-end">
+        <h3 class="footer-menu-head">Get in Touch</h3>
+        <ul class="footer-menu-list">
+          <li>
+            <svg
+              class="footer-icon"
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.99967 9.33333C9.47034 9.33333 10.6663 8.13733 10.6663 6.66667C10.6663 5.196 9.47034 4 7.99967 4C6.52901 4 5.33301 5.196 5.33301 6.66667C5.33301 8.13733 6.52901 9.33333 7.99967 9.33333ZM7.99967 5.33333C8.73501 5.33333 9.33301 5.93133 9.33301 6.66667C9.33301 7.402 8.73501 8 7.99967 8C7.26434 8 6.66634 7.402 6.66634 6.66667C6.66634 5.93133 7.26434 5.33333 7.99967 5.33333Z"
+                fill="#f4e135"
+              />
+              <path
+                d="M7.61372 14.5428C7.72655 14.6234 7.86173 14.6667 8.00038 14.6667C8.13903 14.6667 8.27422 14.6234 8.38705 14.5428C8.58972 14.3995 13.3531 10.9602 13.3337 6.66683C13.3337 3.72616 10.9411 1.3335 8.00038 1.3335C5.05972 1.3335 2.66705 3.72616 2.66705 6.6635C2.64772 10.9602 7.41105 14.3995 7.61372 14.5428ZM8.00038 2.66683C10.2064 2.66683 12.0004 4.46083 12.0004 6.67016C12.0144 9.62883 9.07505 12.2855 8.00038 13.1568C6.92638 12.2848 3.98638 9.6275 4.00038 6.66683C4.00038 4.46083 5.79438 2.66683 8.00038 2.66683Z"
+                fill="#f4e135"
+              />
+            </svg>
+
+            HoangK's Medicals<br />
+            <s class="padding-right-adjust-address"></s> PO BOX 18881 <br />
+            <s class="padding-right-adjust-address"></s> Sugar Land TX 77496
+          </li>
+          <li>
+            <svg
+              class="footer-icon"
+              width="14"
+              height="14"
+              viewBox="0 0 14 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10.8042 7.19514C10.7424 7.13318 10.6689 7.08402 10.588 7.05048C10.5072 7.01694 10.4205 6.99967 10.3329 6.99967C10.2453 6.99967 10.1587 7.01694 10.0778 7.05048C9.9969 7.08402 9.92343 7.13318 9.86157 7.19514L8.7989 8.25781C8.30624 8.11114 7.3869 7.77781 6.80424 7.19514C6.22157 6.61247 5.88824 5.69314 5.74157 5.20047L6.80424 4.13781C6.8662 4.07595 6.91536 4.00248 6.9489 3.9216C6.98244 3.84073 6.99971 3.75403 6.99971 3.66648C6.99971 3.57892 6.98244 3.49222 6.9489 3.41135C6.91536 3.33047 6.8662 3.257 6.80424 3.19514L4.13757 0.528475C4.07571 0.466511 4.00224 0.417353 3.92137 0.383812C3.84049 0.350272 3.75379 0.333008 3.66624 0.333008C3.57868 0.333008 3.49199 0.350272 3.41111 0.383812C3.33023 0.417353 3.25676 0.466511 3.1949 0.528475L1.3869 2.33648C1.13357 2.58981 0.990905 2.93781 0.996238 3.29314C1.01157 4.24248 1.2629 7.53981 3.86157 10.1385C6.46024 12.7371 9.75757 12.9878 10.7076 13.0038H10.7262C11.0782 13.0038 11.4109 12.8651 11.6629 12.6131L13.4709 10.8051C13.5329 10.7433 13.582 10.6698 13.6156 10.5889C13.6491 10.5081 13.6664 10.4214 13.6664 10.3338C13.6664 10.2463 13.6491 10.1596 13.6156 10.0787C13.582 9.9978 13.5329 9.92433 13.4709 9.86248L10.8042 7.19514ZM10.7196 11.6698C9.88757 11.6558 7.0409 11.4325 4.80424 9.19514C2.56024 6.95114 2.3429 4.09448 2.32957 3.27914L3.66624 1.94248L5.39024 3.66648L4.52824 4.52848C4.44988 4.60678 4.39227 4.70337 4.36061 4.80952C4.32895 4.91567 4.32424 5.02804 4.3469 5.13648C4.3629 5.21314 4.75424 7.03114 5.8609 8.13781C6.96757 9.24447 8.78557 9.63581 8.86224 9.65181C8.9706 9.67511 9.08309 9.67078 9.18934 9.63921C9.29559 9.60764 9.39219 9.54984 9.47024 9.47114L10.3329 8.60914L12.0569 10.3331L10.7196 11.6698Z"
+                fill="#f4e135"
+              />
+            </svg>
+            +1-xxx-xxx-xxxx
+          </li>
+          <li>
+            <svg
+              class="footer-icon"
+              width="14"
+              height="12"
+              viewBox="0 0 14 12"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.333 0.666504H1.66634C0.931008 0.666504 0.333008 1.2645 0.333008 1.99984V9.99984C0.333008 10.7352 0.931008 11.3332 1.66634 11.3332H12.333C13.0683 11.3332 13.6663 10.7352 13.6663 9.99984V1.99984C13.6663 1.2645 13.0683 0.666504 12.333 0.666504ZM12.333 1.99984V2.3405L6.99967 6.48917L1.66634 2.34117V1.99984H12.333ZM1.66634 9.99984V4.02917L6.59034 7.85917C6.70708 7.95087 6.85123 8.00071 6.99967 8.00071C7.14812 8.00071 7.29227 7.95087 7.40901 7.85917L12.333 4.02917L12.3343 9.99984H1.66634Z"
+                fill="#f4e135"
+              />
+            </svg>
+
+            support@HoangKsMedical.com
+          </li>
+          <p class="footer-para-mobile">
+            Copyright © 2022 HoangK's Medical. <br />
+            All rights reserved. Terms of service
+          </p>
+        </ul>
+      </div>
+    </footer>
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/homework1.js"></script>
+  </body>
+</html>

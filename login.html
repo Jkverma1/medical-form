@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HoangK's Medical</title>
+
+    <!-- fonts -->
+    <link rel="stylesheet" href="fonts/IBM_Plex_Mono/stylesheet.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="fonts/fontawesome-free/css/all.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script
+      src="https://kit.fontawesome.com/c274061b40.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/register.css" />
+  </head>
+  <body>
+    <!-- signup main -->
+    <section class="signup-main">
+      <!-- header -->
+      <header>
+        <div class="signup-head">
+          <h3 class="signup-head-title">HoangK's Medical</h3>
+        </div>
+        <h1 class="signup-title">Sign In</h1>
+        <div class="signup-form">
+          <form action="confirm-mail.html?#" method="">
+            <div class="input-group">
+              <label for="username">Username</label>
+              <input
+                type="text"
+                class="form-control"
+                name="username"
+                placeholder="Username"
+                onkeypress="return blockSpecialChar(event)"
+              />
+            </div>
+            <div class="input-group">
+              <label for="Password">Password</label>
+              <input
+                type="password"
+                id="Password"
+                class="form-control"
+                name="Password"
+                placeholder="••••••••••••"
+              />
+            </div>
+            <div class="input-group">
+              <label for="Password">Confirm Password</label>
+              <input
+                type="password"
+                id="Confirm-Password"
+                class="form-control"
+                name="Confirm-Password"
+                placeholder="••••••••••••"
+              />
+            </div>
+            <div class="remember-forgot">
+              <label>
+                <input type="checkbox" name="remember" />
+                Remember me
+              </label>
+              <a class="forgot-password" href="forgot-password.html"
+                >Forgot password?</a
+              >
+            </div>
+            <button class="create-account-btn">Sign In</button>
+          </form>
+          <h3 class="already-have-account">
+            New on our platform?<a class="go-to-signin" href="register.html">
+              Sign Up</a
+            >
+          </h3>
+
+          <h5 class="or"><span>or</span></h5>
+          <div class="facebook-google-login">
+            <i class="fa-brands fa-facebook primary"> </i>
+            <i class="fa-brands fa-google red"></i>
+          </div>
+        </div>
+      </header>
+      <!-- end of header -->
+
+      <img class="w-100 register-banner" src="img/image.png" alt="" />
+    </section>
+    <!-- end of signup main -->
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/homework1.js"></script>
+  </body>
+</html>
